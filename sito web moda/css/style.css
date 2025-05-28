@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff; 
+    color: #111;
+    line-height: 1.7;
+    font-size: 16px;
+    margin: 40px;
+}
+
+header {
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+header h1 a {
+    font-size: 2.5rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.container a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.sidebar-text {
+    width: 250px;
+    paddig: 2rem;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    order: -1;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem; /* Ridotto il padding */
+    text-align: left;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem; /* Ridotto lo spazio */
+    color: #111;
+    font-weight: 600;
+}
+
+section p {
+    margin: 0.8rem 0;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+section img {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(190, 91, 91, 0.05);
+}
+
+.cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.cards article {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cards img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.cards button,
+section button {
+    padding: 0.7rem 1.8rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 1rem auto 0 auto;
+    display: block;
+    text-decoration: none; 
+}
+
+.cards button:hover,
+section button:hover {
+    background-color: #222;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+    color: #999;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar-text {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        order: 0; 
+    }
+
+    nav {
+        font-size: 0.9rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+}
